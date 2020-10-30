@@ -1,0 +1,32 @@
+.overlay{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.popupContent{
+    background-color: #fff;
+    width: 100%;
+    max-width:30%;
+    padding: 15px;
+    position: relative;
+    .close{
+        color:#ffffff;
+        position: absolute;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #333333;
+    h3{
+        margin-left: 50px;
+        color: #ffffff;
+        font-size: 25px;
+    }
+    .navWrapper{
+        display: flex;
+        align-items: center;
+    }
+}

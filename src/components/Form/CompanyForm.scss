@@ -1,0 +1,27 @@
+.topWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.companyForm{
+    max-width: 30%;
+    margin: 10px auto;
+    label{
+        display: block;
+        font-size: 18px;
+        input{
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            max-width: 375px;
+            height: 20px;
+            padding: 5px 10px;
+        }
+    }
+}
+

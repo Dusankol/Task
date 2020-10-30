@@ -1,0 +1,45 @@
+.topElements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 50px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    #postTitle{
+            height: 30px;
+            padding: 5px 15px;
+            text-align: justify;
+    }
+    #postBody{
+            height: 100px;
+            padding: 5px 15px;
+            text-align: justify;
+    }
+}
+
+.comments{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li{
+            border: solid 2px black;
+            border-radius: 10px;
+            padding: 5px 10px;
+            margin-bottom:35px;
+            position:relative;
+            background-color: #ffffff;
+        }
+    }
+}

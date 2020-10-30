@@ -1,0 +1,41 @@
+.userWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.userList{
+    list-style-type: none;
+    max-width: 1200px;
+    width: 90%;
+    margin: 10px auto;
+    border: 2px solid black;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    li{
+        border: 1px solid black;
+        margin-bottom: 10px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        span{
+            width: 21%;
+            display: inline-block;
+            border-right: 1px solid black;
+            text-align: center;
+        }
+        span:nth-child(4n){
+            border-right: none;
+        }
+        .buttonWrapper{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+
+
+}

@@ -1,0 +1,39 @@
+ul.mainNavigation{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: none;
+    padding: 0;
+    margin-right: 20px;
+    align-items: center;
+    a{
+        text-decoration: none;
+        padding: 10px 20px;
+        border-right: solid #ffffff 2px;
+        font-size: 20px;
+        color:#ffffff;
+        width: 100px;
+        text-align: center;
+    }
+    a:last-child{
+        border-right: none;
+    }
+    a:hover{
+        color: lightgray;
+        
+    }
+
+   .active{
+       border: 2px solid #ffffff !important;
+   }
+
+
+  
+
+}
+
+.buttonWrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}

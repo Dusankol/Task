@@ -1,0 +1,16 @@
+.newsletter{
+    border: solid black 2px;
+    margin: 10px 40px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    p{
+        padding: 5px 10px;
+    }
+    p.tittle{
+        text-transform: uppercase;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
