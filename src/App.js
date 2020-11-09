@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import "./App.scss";
 import Header from "./components/Header/Header";
-import {BrowserRouter,Route,Switch} from "react-router-dom";
+import {HashRouter,Route,Switch} from "react-router-dom";
 import Users from "./components/Users/Users";
 import Companies from './components/Companies/Companies';
 import CompanyForm from "./components/Form/CompanyForm";
@@ -33,7 +33,7 @@ class App extends Component {
 	render() { 
 	
 		return (
-			<BrowserRouter>
+			<HashRouter>
 			
 					<Header />
 					<Switch>
@@ -47,7 +47,7 @@ class App extends Component {
 					</Switch>
 
 
-			</BrowserRouter>
+			</HashRouter>
 			)
 	}
 

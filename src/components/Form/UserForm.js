@@ -20,21 +20,7 @@ class UserForm extends Component{
                 ...this.props.formData
             })
         }
-         this.setOptions();
          var now=new Date();     
-    }
-
-    setOptions=()=>{
-        let options=JSON.parse(localStorage.getItem("companies"));
-        let y=options.map(item=>item.name);
-        let select=document.querySelector("#company");
-        for(var i=0;i<y.length;i++){
-        const newOption = document.createElement('option');
-        const optionText = document.createTextNode(y[i]);
-        newOption.appendChild(optionText);
-        newOption.setAttribute("value",y[i]);
-        select.append(newOption)
-        }
     }
 
     limitDate=()=>{
@@ -71,9 +57,15 @@ class UserForm extends Component{
                         onChange={(e)=>this.inputChange(e)} /></label>
                 <label>Company:
                 <select name="companyName"
-                        id="company" 
+                        id="company"
+                        value={companyName} 
                         onChange={(e)=>this.inputChange(e)}>
                     <option></option>
+                    {
+                        JSON.parse(localStorage.getItem("companies")).map((item,i)=>{
+                        return <option key={i}>{item.name}</option>
+                        })
+                    }
                 </select>
                     
                 </label>
@@ -85,6 +77,7 @@ class UserForm extends Component{
                 <label>Position:
                 <select name="position"
                  id="position" 
+                 value={position}
                  onChange={(e)=>this.inputChange(e)}>
                         <option></option>
                         <option value="Manager">Manager</option>
