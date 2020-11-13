@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import "./App.scss";
 import Header from "./components/Header/Header";
-import {HashRouter,Route,Switch} from "react-router-dom";
+import {Route,Switch} from "react-router-dom";
 import Users from "./components/Users/Users";
 import Companies from './components/Companies/Companies';
 import CompanyForm from "./components/Form/CompanyForm";
@@ -33,8 +33,7 @@ class App extends Component {
 	render() { 
 	
 		return (
-			<HashRouter>
-			
+			<Fragment>
 					<Header />
 					<Switch>
 						<Route path="/" exact component={Home} />
@@ -45,9 +44,7 @@ class App extends Component {
 						<Route path="/newsletters" exact component={Newsletters} />
 						<Route path="/newsletters/:id" component={Details} />
 					</Switch>
-
-
-			</HashRouter>
+			</Fragment>
 			)
 	}
 

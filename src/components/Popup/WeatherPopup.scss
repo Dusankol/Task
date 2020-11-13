@@ -1,21 +1,15 @@
 .weatherPopup{
-    width: 70px;
-    height: 30px;
+    max-width: 70px;
+    width: 100%;
+    height: auto;
     margin-right: 20px;
     position: absolute;
     top: 35px;
-    display: none;
     text-align: center;
     font-size: 14px;
-    height: auto;
-    padding: 5px;
-    right: -7px;
-    &.show{
-        display: block;
-        background-color: #333333;
-        color: #ffffff;
-        border: 1px solid #ffffff;
-    }
+    display: block;
+    background-color: #333333;
+    color: #ffffff;
     p{
         margin: 0;
     }

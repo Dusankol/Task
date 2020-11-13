@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import "./UserForm.scss";
+import Input from "./Input.js";
 
 class UserForm extends Component{
 
@@ -20,12 +21,18 @@ class UserForm extends Component{
                 ...this.props.formData
             })
         }
+        
          var now=new Date();     
     }
-
+  
     limitDate=()=>{
         let now=new Date();
         return now.toISOString().substring(0,10)
+    }
+    onInputChange=(name,value)=>{
+        this.setState({
+            [name]:value
+        })
     }
 
     inputChange=(e)=>{
@@ -47,25 +54,30 @@ class UserForm extends Component{
         const {firstName,lastName,companyName,DOB,position,phoneNumber}=this.state;
         return(
             <section className="form">
+                {/* <Input label="First Name: " type="text" name="firstName" onInputChange={this.onInputChange}  />
+
+                <Input label="Last Name: " type="text" name="lastName" onInputChange={this.onInputChange}  /> */}
+
                 <label>First Name:<input type="text"
                         value={firstName}
                         name="firstName" 
                         onChange={(e)=>this.inputChange(e)} /></label>
-                <label>Last Name:<input type="text"
+                 <label>Last Name:<input type="text"
                         value={lastName}
                         name="lastName"
-                        onChange={(e)=>this.inputChange(e)} /></label>
+                        onChange={(e)=>this.inputChange(e)} /></label> 
                 <label>Company:
                 <select name="companyName"
-                        id="company"
-                        value={companyName} 
-                        onChange={(e)=>this.inputChange(e)}>
-                    <option></option>
-                    {
+                        id="company" 
+                        value={companyName}
+                        onChange={(e)=>this.inputChange(e)}
+                        >
+                        <option></option>
+                        {
                         JSON.parse(localStorage.getItem("companies")).map((item,i)=>{
                         return <option key={i}>{item.name}</option>
                         })
-                    }
+                        }
                 </select>
                     
                 </label>
@@ -76,8 +88,8 @@ class UserForm extends Component{
                         onChange={(e)=>this.inputChange(e)} /></label>
                 <label>Position:
                 <select name="position"
-                 id="position" 
-                 value={position}
+                 id="position"
+                 value={position} 
                  onChange={(e)=>this.inputChange(e)}>
                         <option></option>
                         <option value="Manager">Manager</option>
@@ -86,12 +98,15 @@ class UserForm extends Component{
                         <option value="Stuff">Stuff</option>
                     </select>
                 </label>
-                <label>Phone Number:<input maxLength="9" 
+
+
+                {/* <Input minLength="9" maxLength="9" label="Phone number: " type="text" name="phoneNumber" onInputChange={this.onInputChange}  />    */}
+                 <label>Phone Number:<input maxLength="9" 
                         minLength="9" 
                         type="text" 
                         value={phoneNumber} 
                         name="phoneNumber" 
-                        onChange={(e)=>this.inputChange(e)} /></label>
+                        onChange={(e)=>this.inputChange(e)} /></label> 
                 <button onClick={this.addUser}>Submit</button>
             </section>
 

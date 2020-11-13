@@ -39,6 +39,10 @@ div.comments ul li:hover span{
     display: block;
 }
 
+.green{
+    color:green;
+}
+
 
 @keyframes changeSize{
     0%{width: 600px;} 50%{width: 700px;} 100%{width:800px}

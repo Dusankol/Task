@@ -21,7 +21,7 @@ const Header = () =>{
 
     const printWeatherData=(data)=>{
         let popup=document.querySelector(".weatherPopup");
-        popup.classList.add("show");
+        //popup.classList.add("show");
         let temp=document.createElement("p");
         let tempDes=document.createElement("p");
         temp.textContent=(data.main.temp-273.15).toFixed(1)+ "\u00B0C";
@@ -37,7 +37,7 @@ const Header = () =>{
             showPopup:false
         })
         let popup=document.querySelector(".weatherPopup");
-        popup.classList.remove("show");
+        //popup.classList.remove("show");
         popup.textContent="";
      }
 

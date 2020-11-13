@@ -11,6 +11,7 @@ class Companies extends Component{
     }
 
     componentDidMount(){
+        
         this.setState({
             companies:JSON.parse(localStorage.getItem("companies"))
         })

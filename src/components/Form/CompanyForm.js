@@ -40,6 +40,7 @@ class CompanyForm extends Component{
         });
       }
       editCompany=(companies)=>{
+          console.log(companies)
         let modId=this.props.match.params.id.substr(1,36);
         let index=companies.findIndex(company=>company.id===modId);
         companies.splice(index,1,this.state)
@@ -48,6 +49,7 @@ class CompanyForm extends Component{
       }
 
       addCompany=(companies)=>{
+          console.log(companies)
         this.setState({
             id:this.uuidv4()
         },()=>{companies.push(this.state)                
@@ -106,7 +108,7 @@ render(){
                 
             </div>
             {this.props.match.params.id?
-            <Users /> : null}
+            <Users name={this.state.name} /> : null}
             
         </Fragment>
     )

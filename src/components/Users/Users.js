@@ -13,10 +13,11 @@ state={
 
 
 componentDidMount(){
-    
+
     this.setState({
         users:JSON.parse(localStorage.getItem("users"))
     })
+
 
 }
 
@@ -29,7 +30,8 @@ componentDidMount(){
   renderUsers(){
       return(
       <ul className="userList">
-    {this.state.users.map(user=>{
+    {
+    this.state.users.map(user=>{
         return <User deleteUser={this.deleteUser} 
                 editUser={this.editUser} 
                 firstName={user.firstName}
@@ -40,9 +42,9 @@ componentDidMount(){
                 companyId={user.companyId}
                 companyName={user.companyName} 
                 position={user.position} 
-                phoneNumber={user.phoneNumber} />
-        
-    })}
+                phoneNumber={user.phoneNumber} />  
+    }) 
+}
     </ul>)
   }
 
